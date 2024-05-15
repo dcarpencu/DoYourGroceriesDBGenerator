@@ -1,42 +1,35 @@
-import re
+def percentage_strings_in_whitelist(tags, whitelist):
+    if not whitelist:
+        return 0
+    count = 0
+    for tag in tags:
+        if any(item in whitelist for item in tag.split()):
+            count += 1
+    return (count / len(tags)) * 100 if tags else 0
 
 
-def parse_string(input_string, blacklist):
-    # Tokenize the input string
-    words = re.findall(r'\b[\w.]+\b', input_string)
-
-    # print(words)
-
-    # Filter out unwanted words
-    filtered_words = [word for word in words if
-                      len(word) > 2 and word not in blacklist and not any(char.isdigit() for char in word) and not any(char == '.' for char in word)]
-
-    # print(filtered_words)
-
-    # # Remove words that end in '.' (period) from the filtered list
-    # filtered_words = [word for word in filtered_words if not word.endswith('.')]
-
-    # Join the remaining words into a list of strings
-    tags = filtered_words
-
-    return tags
-
-
-# Test the function
-blacklist = [
-    'g', 'de', 'din', '+/-', 'la', 'un', 'kg', 'G', '%', 'cu', ',', 'l', 'punga', 'to',
-    'auchan', 'cuburi', 'ready', 'eat', 'fresh', 'pe', 'bucata', 'pret', 'bucati',
-    'netratate', 'dupa', 'recoltare', 'dupa', 'si', 'eco', 'red', 'delicious', 'golden',
-    'idared', 'jonaprince', 'caserola', 'plasa', 'agriro', 'drink', 'grasime', 'ml', 'gr',
-    'vrac', 'buc', 'pls', 'ptr', 'fiert', 'nrg', 'x', 'dz', 'pet', 'trk', 't', 'mg',
-    'doza', 'nrgb', 'per',
+whitelistLegume = [
+    'pepene galia', 'ananas', 'pere packmas', 'avocado', 'pepene galben', 'capsuni romanesti',
+    'pere abate', 'capsuni', 'clementine', 'coacaze rosii', 'fructul pasiunii', 'grapefruit rosu',
+    'lamai', 'limes', 'mandarine', 'mango', 'mix mere', 'mere rosii', 'mere', 'zmeura', 'kiwi',
+    'afine', 'lamai', 'portocale', 'avocado', 'mure', 'nuca cocos', 'papaya', 'pepene verde',
+    'pere conference', 'physalis', 'piersici', 'portocale', 'struguri albi seedless', 'struguri roze seedless',
+    'rodii', 'afine', 'ciuperci galbiori uscati gradina padurii', 'ciuperci uscate trambita piticului',
+    'curmale deshidratate jasmin', 'curmale deshidratate', 'ghebe uscate gradina padurii', 'goji deshidratate',
+    'merisoare uscate', 'mix fructe uscate power noberasco', 'mix fructe confiate lux', 'prune deshidratate noberasco',
+    'prune uscate', 'amestec fructe deshidratate nuci', 'smochine deshidratate noberasco', 'smochine deshidratate',
+    'prune uscate fara samburi', 'prune uscate fara samburi', 'rosii cherry alungite'
 ]
 
-input_strings = [
-    'Beck S 5% Ep.11,2 0,75L St',
-    'Becks Bere 5%  Ep. 11,2 St.Neret 0,33L'
-]
+tags = ['pepene', 'ananas', 'avocado', 'mango', 'mere', 'rosii']
 
-for input_string in input_strings:
-    tags = parse_string(input_string, blacklist)
-    print(tags)
+max_percentage = 0
+best_match = None
+
+for item in whitelistLegume:
+    percentage = percentage_strings_in_whitelist(tags, item)
+    if percentage > max_percentage:
+        max_percentage = percentage
+        best_match = item
+
+print(f"The string '{best_match}' has the highest percentage of tags: {max_percentage}%")

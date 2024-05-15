@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "doyourgroceriesapp",
+  "private_key_id": "49647ca246038361c3fb1ea106eaca817a64b440",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCq44uItmNOfiDE\ntLhh+Kdk8jr9na9MOGEdtJmwZjFlG4PcUTScuT7uFSiaqq0ehWu7NeFWslaib8a6\nvzXsDI9KTvoVLP521e+v1pSWLDO5b8sQwBmtBwph8tRyfSezA/4SPy5l/7DM/lw/\n7i3M0kvd8xEYCpch9LQLcmQ8pK5dCC1NE2OgO6aROErXLvS84+dW/Mvfb31WKIbw\nCZP/8/jETRXgFT2ZCcwejdRmlWozptvT+BO27KtDKCUx9xxPRDqVnO9g2QuYYfF7\nniR2ug31eAUa5j1n2ZuutsX35YSUaLxTBwQozXUE+PvHQlOH/LDY5RTirh/9A1Kb\n1GytJBZpAgMBAAECggEADGGEWakpLxB+oZxxort9WULJg61vJr0LoDeA+QxLtjEU\n+nCHDiHHuD/KhiYpI8XJL9zv+17cCFRugqzZecV72NzkS9t2K42axNPC8ScOWk2K\nBKfTqbsRsACuuVrC9mUq0mScdncHdq/+Zq1Zc8ulWSpunx4epARSymTac/WpzQNC\nf79jd4nA+su20wgNNlCPMYYRCeQh9ONMSDsZx2fiQzi8mBZdpArWISC7KMRRTpm/\ne3XJGNOSDBMpdD4p3YhXNPMSNrIyHUdbGPyDpJCJVv2IbgqhKz9sPKXKotthyFet\n+kZ7Picghg98rYuoygU2pJZy60pdrojDhuh8LH0x5wKBgQDWelm5Ftm/lQj16076\ntqo3haiJeewCLZRI1zcDcv5KfSZCKkqfw+Q3fg641LRJJsOfv0Gh9YQk2fGyQ+dv\nGo5/D263ApezAtdXChr+hNgQuzvhMDM9slCHFrBKoDKRm/7jmP2xxcfyXVT4Ucpy\n0lyWDCq1gCH3BMMNn2eOyn9IwwKBgQDL+OUAsEwsYXa6Nygci+TwqiU93GWqPl/K\noqDDngYwFTnVSsoMDxSNTip/rFOEFGNOfadhgL7cEONDwksfIwhPKksgyu1K/WSy\nxt0Sh/AjXwxSTp6W52cEAIVm1CTkX8WH2xa+7fW9UqRp/Iti2hcUGROTVCL9gpw6\nZnxIPDIRYwKBgQDABWydBLNRDiqmmdTtLGt7KCQ7aTf+vzX6fQyY/vRiVmfRZzHG\nlkiV0jt2CaGbuKP+OuqVCU4U/DejZZ4n37viUDvMh/qvX4TSPY7rfp4/ZJJ4y4Gk\n5Cequop9Va3QpbxvosLHzY51FFCFvhyl7mbMQ/pc42oFUXMcmDHMKsoIpwKBgBeU\nNiTWPHgE7Eyqg6CJK3YGtTdpevcrLremBR+X7O8yBPV7J9AtDhsnphIMQbtLAA/a\nxramw2l9Kkhy9WwsCJHeOcEYtEWu9S0VgAjcXg44tpvtKrgXF/mGdeVlML6Vs6f4\n07BOodG48/iskRBkVbalD3ZAi6rypky5/DP9gWwxAoGAXXPzkCUJHUHCi0WYo1Cc\nlPUTEXwYDMPNvRsoAemeEtXgkTzvhlVhKbvw5xDmzH0B7K4pflVxHBDMGfy66BvP\nGbRdWDJe40XOTsRw/Jcub6HAw8dUgFE3ic2f1CWZAIzR3RCeAkTh7Ilyvts8sjVQ\nro6GuZ26C2+drqlBg1n7h3s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-mjx03@doyourgroceriesapp.iam.gserviceaccount.com",
+  "client_id": "108007919733923347572",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-mjx03%40doyourgroceriesapp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
