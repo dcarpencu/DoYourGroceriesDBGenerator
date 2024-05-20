@@ -6,9 +6,9 @@ import re
 from bs4 import BeautifulSoup
 from firebase_admin import credentials, firestore
 
-from white_lists import whitelistLegume, allWhitelists
+from white_lists import allWhitelists, occurrences
 
-cred = credentials.Certificate("doyourgroceriesapp-49647ca24603.json")
+cred = credentials.Certificate("doyourgroceries-fea564651a4e.json")
 app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
@@ -40,8 +40,6 @@ def percentage_strings_in_whitelist(tags, whitelist):
 
 
 async def generate_products():
-    pg_ct = 0
-
     for index_supermarkets in range(5):
         current_supermarket_name = markets_data.markets_names[index_supermarkets]
         print(current_supermarket_name)
@@ -77,9 +75,13 @@ async def generate_products():
                 else:
                     price_item = 0.0
 
-                title = food_info.select_one('div.title').text
+                title_with_spaces = food_info.select_one('div.title').text
+                title = re.sub(r'\s+', ' ', title_with_spaces).strip()
 
                 filtered_product_name = parse_string(title, markets_data.blacklist)
+
+                # for thing in filtered_product_name:
+                #     occurrences[thing] += 1
 
                 max_percentage = 0
                 best_match = None
@@ -90,6 +92,7 @@ async def generate_products():
                         max_percentage = percentage
                         best_match = item
 
+                occurrences[best_match] += 1
                 # print(f"The string '{best_match}' has the highest percentage of tags: {max_percentage}%")
 
                 product = {
@@ -98,14 +101,16 @@ async def generate_products():
                     'price': price_item,
                     'image': image,
                     'page': pg_ct,
-                    'tag': filtered_product_name,
+                    'tag': best_match,
+                    'keyWords': filtered_product_name,
                     'supermarket': current_supermarket_name,
                     'category': category
                 }
                 # print(product)
-
-                db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
-                ref.set(product)
+                # db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
+                # ref.set(product)
+    for item, count in occurrences.items():
+        print(f"{item}: {count}")
 
 
 async def main():

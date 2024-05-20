@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137ba174-1585-478e-bddb-2f811a37e494" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/doyourgroceriesapp-49647ca24603.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/white_lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/white_lists.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
     "Python.__main__.executor": "Run",
     "Python.main.executor": "Run",
     "Python.test_scripts.executor": "Run",
+    "Python.white_lists.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/carpencudavid/David/Flutter projects/proiect_licenta/DoYourGroceriesDBGenerator"
