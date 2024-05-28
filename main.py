@@ -40,14 +40,15 @@ def percentage_strings_in_whitelist(tags, whitelist):
 
 
 async def generate_products():
-    for index_supermarkets in range(5):
+    for index_supermarkets in range(3, 5):
         current_supermarket_name = markets_data.markets_names[index_supermarkets]
         print(current_supermarket_name)
         current_supermarket_data = markets_data.all_supermarkets.get(current_supermarket_name)
 
-        for index, category in enumerate(markets_data.supermarket_categories):
+        # for index, category in enumerate(markets_data.supermarket_categories):
             # print(category)
-            url = current_supermarket_data.get(category)
+            url = 'https://tazz.ro/timisoara/penny/bauturi-alcoolice/14722/2345460/dpt'
+            # current_supermarket_data.get(category))
             print(url)
             response = requests.get(url)
 
@@ -109,8 +110,8 @@ async def generate_products():
                 # print(product)
                 # db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
                 # ref.set(product)
-    for item, count in occurrences.items():
-        print(f"{item}: {count}")
+    # for item, count in occurrences.items():
+    #     print(f"{item}: {count}")
 
 
 async def main():
