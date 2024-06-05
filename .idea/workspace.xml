@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137ba174-1585-478e-bddb-2f811a37e494" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/labels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_unquant.tflite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensorflow_script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/productsGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/productsGenerator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/white_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/white_lists.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -602,6 +602,7 @@ whitelistMezeluri = [
 ]
 
 whitelistLactate = [
+    'mozzarela',
     'oua fierte vopsite miketi',
     'oua gaina',
     'oua gaina albatros',
@@ -1687,6 +1688,7 @@ whitelistBauturiNonalcoolice = [
     'Nectar',
     'espresso',
     'k-to-go',
+    'milkshake',
     'nestle',
 ]
 
@@ -1694,6 +1696,8 @@ whitelistBauturiAlcoolice = [
     'bere beck',
     'bere ursus',
     'wembley',
+    'stalinskaya',
+    'budweiser',
     'glenlivet',
     'beefeater',
     'cervus'
