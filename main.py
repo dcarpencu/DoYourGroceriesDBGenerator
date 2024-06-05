@@ -14,9 +14,6 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
-# doc_ref = db.collection("pula").document("alovelace")
-# doc_ref.set({"first": "Ada", "last": "Lovelace", "born": 1815})
-
 def parse_string(input_string, blacklist):
     words = re.findall(r'\b[\w.]+\b', input_string)
 
@@ -40,16 +37,15 @@ def percentage_strings_in_whitelist(tags, whitelist):
 
 
 async def generate_products():
-    for index_supermarkets in range(3, 5):
+    for index_supermarkets in range(5):
         current_supermarket_name = markets_data.markets_names[index_supermarkets]
         print(current_supermarket_name)
         current_supermarket_data = markets_data.all_supermarkets.get(current_supermarket_name)
 
-        # for index, category in enumerate(markets_data.supermarket_categories):
-            # print(category)
-            url = 'https://tazz.ro/timisoara/penny/bauturi-alcoolice/14722/2345460/dpt'
-            # current_supermarket_data.get(category))
-            print(url)
+        for index, category in enumerate(markets_data.supermarket_categories):
+            print(category)
+            url = current_supermarket_data.get(category)
+            # print(url)
             response = requests.get(url)
 
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -107,7 +103,8 @@ async def generate_products():
                     'supermarket': current_supermarket_name,
                     'category': category
                 }
-                # print(product)
+                if best_match is None:
+                    print(product)
                 # db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
                 # ref.set(product)
     # for item, count in occurrences.items():

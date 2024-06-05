@@ -1,0 +1,4 @@
+0 ananas
+1 banane
+2 lamai
+3 avocado

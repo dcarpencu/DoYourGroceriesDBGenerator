@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137ba174-1585-478e-bddb-2f811a37e494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/labels.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_unquant.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/productsGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/productsGenerator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/white_lists.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2gS5dvlbLonrSJe4zTEpNNnAJKz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tensorflow_script.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_scripts.executor&quot;: &quot;Run&quot;,
     &quot;Python.white_lists.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
