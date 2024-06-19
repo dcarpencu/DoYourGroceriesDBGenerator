@@ -37,7 +37,7 @@ def percentage_strings_in_whitelist(tags, whitelist):
 
 
 async def generate_products():
-    for index_supermarkets in range(5):
+    for index_supermarkets in range(6):
         current_supermarket_name = markets_data.markets_names[index_supermarkets]
         print(current_supermarket_name)
         current_supermarket_data = markets_data.all_supermarkets.get(current_supermarket_name)
@@ -45,7 +45,7 @@ async def generate_products():
         for index, category in enumerate(markets_data.supermarket_categories):
             print(category)
             url = current_supermarket_data.get(category)
-            # print(url)
+            print(url)
             response = requests.get(url)
 
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -62,10 +62,16 @@ async def generate_products():
                 food_info = link.select_one('div.content-container')
                 image = link.select_one('div.image-container > img')['src']
 
-                price = food_info.select_one('div.price-container > span.price')
+                price_red = food_info.select_one('div.price-container > span.price.red')
+                price_normal = food_info.select_one('div.price-container > span.price')
+
+                if price_red:
+                    price = price_red.get_text()
+                else:
+                    price = price_normal.get_text()
 
                 pattern = r'\d*\.?\d+'
-                match = re.search(pattern, price.text)
+                match = re.search(pattern, price)
                 if match:
                     price_item = match.group()
                     price_item = float(price_item)
@@ -103,10 +109,13 @@ async def generate_products():
                     'supermarket': current_supermarket_name,
                     'category': category
                 }
-                if best_match is None:
-                    print(product)
-                # db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
-                # ref.set(product)
+                # if best_match is None:
+                # print(product)
+                if 'Indisponibil' not in price:
+                    # print(product)
+                    # print(price)
+                    db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
+                    ref.set(product)
     # for item, count in occurrences.items():
     #     print(f"{item}: {count}")
 

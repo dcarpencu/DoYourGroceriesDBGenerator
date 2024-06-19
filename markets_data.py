@@ -1,10 +1,11 @@
-markets_names = ['Auchan', 'Carrefour', 'Kaufland', 'Penny', 'Profi']
+markets_names = ['Auchan', 'Carrefour', 'Kaufland', 'Penny', 'Profi', 'Mega Image']
 markets_pictures = [
     'https://www.hellopark.ro/pictures/original/318255e7cfa2c1093c-auchan.jpg',
     'https://logowik.com/content/uploads/images/210_carrefour.jpg',
     'https://kaufland.media.schwarz/is/image/schwarz/t-kaufland-magazin%20%282%29?JGstbGVnYWN5LW9uc2l0ZS00JA==',
     'https://assets-eu-01.kc-usercontent.com/b50b8cce-450a-0138-7b43-de6bc2f3ad32/dfa9eff8-af7e-4d76-941f-226973049f2c/otopeni.jpg?w=1500&fm=webp&lossless=0&q=80',
     'https://storage0.dms.mpinteractiv.ro/media/1/1481/21335/22104753/1/profi.jpg',
+    'https://www.shtiu.ro/wp-content/uploads/2018/09/mega-scaled.jpg',
 ]
 
 blacklist = [
@@ -32,12 +33,12 @@ supermarket_category_icons = [
 
 all_supermarkets = {
     'Auchan': {
-        'legume': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/legume-si-fructe/9063/2355527/dpt',
-        'carne': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/macelarie-si-peste/9063/2355685/dpt',
-        'mezeluri': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/mezeluri-si-specialitati/9063/2356037/dpt',
-        'lactate': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/lactate-branzeturi-si-oua/9063/2355796/dpt',
-        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/bauturi-non-alcoolice/9063/2356141/dpt',
-        'bauturiAlcoolice': 'https://tazz.ro/timisoara/auchan-hypermarket-timisoara/bauturi-alcoolice/9063/2356655/dpt'
+        'legume': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/legume-si-fructe/12481/2597257/dpt',
+        'carne': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/macelarie-si-peste/12481/2597278/dpt',
+        'mezeluri': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/mezeluri-si-specialitati/12481/2597415/dpt',
+        'lactate': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/lactate-branzeturi-si-oua/12481/2597300/dpt',
+        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/bauturi-non-alcoolice/12481/2597489/dpt',
+        'bauturiAlcoolice': 'https://tazz.ro/timisoara/auchan-supermarket-timisoara/bauturi-alcoolice/12481/2597564/dpt'
     },
     'Carrefour': {
         'legume': 'https://tazz.ro/timisoara/carrefour-timisoara-9113-/fructe-si-legume/21098/2249517/dpt',
@@ -56,19 +57,27 @@ all_supermarkets = {
         'bauturiAlcoolice': 'https://tazz.ro/timisoara/kaufland-timisoara/bauturi-alcoolice/3865/1800448/dpt'
     },
     'Penny': {
-        'legume': 'https://tazz.ro/timisoara/penny/legume-si-fructe/14722/2345386/dpt',
-        'carne': 'https://tazz.ro/timisoara/penny/macelarie-si-peste/14722/2345396/dpt',
-        'mezeluri': 'https://tazz.ro/timisoara/penny/mezeluri-si-specialitati/14722/2345439/dpt',
-        'lactate': 'https://tazz.ro/timisoara/penny/lactate-branzeturi-si-oua/14722/2345409/dpt',
-        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/penny/bauturi-non-alcoolice/14722/2345448/dpt',
-        'bauturiAlcoolice': 'https://tazz.ro/timisoara/penny/bauturi-alcoolice/14722/2345460/dpt'
+        'legume': 'https://tazz.ro/timisoara/penny/legume-si-fructe/14719/2704623/dpt',
+        'carne': 'https://tazz.ro/timisoara/penny/macelarie-si-peste/14719/2704633/dpt',
+        'mezeluri': 'https://tazz.ro/timisoara/penny/mezeluri-si-specialitati/14719/2704632/dpt',
+        'lactate': 'https://tazz.ro/timisoara/penny/lactate-branzeturi-si-oua/14719/2704631/dpt',
+        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/penny/bauturi-non-alcoolice/14719/2704624/dpt',
+        'bauturiAlcoolice': 'https://tazz.ro/timisoara/penny/bauturi-alcoolice/14719/2704622/dpt'
     },
     'Profi': {
-        'legume': 'https://tazz.ro/timisoara/profi/fructe-si-legume/19615/2094143/dpt',
-        'carne': 'https://tazz.ro/timisoara/profi/carne/19615/2094166/cat',
-        'mezeluri': 'https://tazz.ro/timisoara/profi/mezeluri/19615/2094147/dpt',
-        'lactate': 'https://tazz.ro/timisoara/profi/lactate-si-oua/19615/2094146/dpt',
-        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/profi/bauturi-non-alcoolice/19615/2094149/dpt',
-        'bauturiAlcoolice': 'https://tazz.ro/timisoara/profi/bauturi-alcoolice/19615/2094150/dpt'
+        'legume': 'https://tazz.ro/timisoara/profi/fructe-si-legume/19674/1776919/dpt',
+        'carne': 'https://tazz.ro/timisoara/profi/carne/19674/1776929/cat',
+        'mezeluri': 'https://tazz.ro/timisoara/profi/mezeluri/19674/1776980/dpt',
+        'lactate': 'https://tazz.ro/timisoara/profi/lactate-si-oua/19674/1776952/dpt',
+        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/profi/bauturi-non-alcoolice/19674/1776997/dpt',
+        'bauturiAlcoolice': 'https://tazz.ro/timisoara/profi/bauturi-alcoolice/19674/1777011/dpt'
+    },
+    'Mega Image': {
+        'legume': 'https://tazz.ro/timisoara/mega-image-timisoara/legume-si-fructe/1535/1789150/dpt',
+        'carne': 'https://tazz.ro/timisoara/mega-image-timisoara/macelarie-si-peste/1535/1789215/dpt',
+        'mezeluri': 'https://tazz.ro/timisoara/mega-image-timisoara/mezeluri-si-specialitati/1535/1789350/dpt',
+        'lactate': 'https://tazz.ro/timisoara/mega-image-timisoara/lactate-branzeturi-si-oua/1535/1789247/dpt',
+        'bauturiNonAlcoolice': 'https://tazz.ro/timisoara/mega-image-timisoara/bauturi-non-alcoolice/1535/1789372/dpt',
+        'bauturiAlcoolice': 'https://tazz.ro/timisoara/mega-image-timisoara/bauturi-alcoolice/1535/1789436/dpt'
     }
 }
