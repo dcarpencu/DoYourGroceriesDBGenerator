@@ -18,8 +18,9 @@ def parse_string(input_string, blacklist):
     words = re.findall(r'\b[\w.]+\b', input_string)
 
     filtered_words = [word.lower() for word in words if
-                      len(word) > 2 and word not in blacklist and not any(char.isdigit() for char in word) and not any(
-                          char == '.' for char in word)]
+                      len(word) > 2 and word not in blacklist and
+                      not any(char.isdigit() for char in word) and
+                      not any(char == '.' for char in word)]
 
     tags = filtered_words
 
@@ -109,11 +110,8 @@ async def generate_products():
                     'supermarket': current_supermarket_name,
                     'category': category
                 }
-                # if best_match is None:
-                # print(product)
+
                 if 'Indisponibil' not in price:
-                    # print(product)
-                    # print(price)
                     db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
                     ref.set(product)
     # for item, count in occurrences.items():

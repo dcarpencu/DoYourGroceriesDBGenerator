@@ -1,4 +1,5 @@
 markets_names = ['Auchan', 'Carrefour', 'Kaufland', 'Penny', 'Profi', 'Mega Image']
+
 markets_pictures = [
     'https://www.hellopark.ro/pictures/original/318255e7cfa2c1093c-auchan.jpg',
     'https://logowik.com/content/uploads/images/210_carrefour.jpg',
