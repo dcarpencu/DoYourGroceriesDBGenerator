@@ -3,7 +3,7 @@ import requests
 import firebase_admin
 from firebase_admin import credentials, firestore
 
-import markets_data
+from database_writer import markets_data
 
 cred = credentials.Certificate("doyourgroceries-fea564651a4e.json")
 firebase_admin.initialize_app(cred)

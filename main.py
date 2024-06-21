@@ -1,12 +1,12 @@
 import firebase_admin
-import markets_data
+from database_writer import markets_data
 import requests
 import asyncio
 import re
 from bs4 import BeautifulSoup
 from firebase_admin import credentials, firestore
 
-from white_lists import allWhitelists, occurrences
+from database_writer.white_lists import allWhitelists, occurrences
 
 cred = credentials.Certificate("doyourgroceries-fea564651a4e.json")
 app = firebase_admin.initialize_app(cred)
@@ -84,9 +84,6 @@ async def generate_products():
 
                 filtered_product_name = parse_string(title, markets_data.blacklist)
 
-                # for thing in filtered_product_name:
-                #     occurrences[thing] += 1
-
                 max_percentage = 0
                 best_match = None
 
@@ -97,7 +94,6 @@ async def generate_products():
                         best_match = item
 
                 occurrences[best_match] += 1
-                # print(f"The string '{best_match}' has the highest percentage of tags: {max_percentage}%")
 
                 product = {
                     'productId': ref.id,
@@ -114,12 +110,13 @@ async def generate_products():
                 if 'Indisponibil' not in price:
                     db.document(f'tags/{category}/{best_match}/{ref.id}').set(product)
                     ref.set(product)
+
+    # checks for occurrences
     # for item, count in occurrences.items():
     #     print(f"{item}: {count}")
 
 
 async def main():
     await generate_products()
-
 
 asyncio.run(main())
