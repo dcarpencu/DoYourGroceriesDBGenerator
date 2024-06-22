@@ -1,4 +1,4 @@
-
+# ![DoYourGroceries Logo](assets/appLogo/DoYourGroceriesLogo.png)
 
 DoYourGroceriesDBGenerator
 
